@@ -21,5 +21,12 @@
         <maven.compiler.target>11</maven.compiler.target>
     </properties>
 
+    <distributionManagement>
+        <repository>
+            <id>dep-repo</id>
+            <name>GitHub OWNER Apache Maven Packages</name>
+            <url>https://maven.pkg.github.com/some-ogranization</url>
+        </repository>
+    </distributionManagement>
 
 </project>
