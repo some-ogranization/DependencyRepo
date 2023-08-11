@@ -22,9 +22,9 @@ jobs:
         with:
           java-version: '11'
           distribution: 'temurin'
-#          server-id: github # Value of the distributionManagement/repository/id field of the pom.xml
-#          settings-path: ${{ github.workspace }} # location for the settings.xml file
-#
+          server-id: dependency-repo # Value of the distributionManagement/repository/id field of the pom.xml
+          settings-path: ${{ github.workspace }} # location for the settings.xml file
+
       - name: Build with Maven
         run: mvn -B package --file pom.xml
 
@@ -32,4 +32,3 @@ jobs:
         run: mvn --batch-mode deploy
         env:
           GITHUB_TOKEN: ${{ secrets.PACKAGE_TOKEN }}
-#          GITHUB_USERNAME: 'AlexandraIlie'
